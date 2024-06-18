@@ -6,7 +6,7 @@
 /*   By: rmeuzela <rmeuzela@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/11/23 13:05:33 by rmeuzela      #+#    #+#                 */
-/*   Updated: 2024/06/15 20:55:32 by rmeuzela      ########   odam.nl         */
+/*   Updated: 2024/01/11 22:44:16 by rmeuzela      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,18 @@
 # if BUFFER_SIZE <= 0
 #  error "BUFFER_SIZE needs to be greater than 0."
 # endif
-# include <fcntl.h>
-# include "../../include/libft.h"
-# include "get_next_line_bonus.h"
+# include <stdlib.h>
+# include <stdio.h>
 
 int		set_buffer(char **buffer, int fd);
 char	*create_line(char *line, char **buffer);
 char	*divide_remainder(char **buffer, int chars_to_newline);
 char	*get_next_line(int fd);
 
-size_t	null_or_strlen(const char *s);
+size_t	ft_strlen(const char *s);
 int		get_chars_to_newline(char *string);
-char	*join_buffer(char *line, char *buffer);
-char	*string_slice(char *s, unsigned int start, size_t len);
+char	*ft_strjoin(char *line, char *buffer);
+char	*ft_calloc(size_t nmemb, size_t size);
+char	*ft_substr(char *s, unsigned int start, size_t len);
 
 #endif
